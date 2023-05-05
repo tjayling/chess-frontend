@@ -1,5 +1,5 @@
 import {configureStore} from "@reduxjs/toolkit";
-import lobbyReducer from "./lobby-reducer";
+import lobbyReducer from "./user-reducer";
 import userReducer from "./user-reducer";
 
 export const store = configureStore({

@@ -2,8 +2,7 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {User, UserDetails} from "../types/user";
 
 
-
-const initialState: {currentUsers: User[]} = {
+const initialState: { currentUsers: User[] } = {
     currentUsers: [],
 }
 
@@ -11,7 +10,8 @@ export const lobbySlice = createSlice({
     name: "lobby",
     initialState,
     reducers: {
-        setCurrentUsers: (state, action: PayloadAction<User[]>) => {
+        setCurrentUsers: (state, action: PayloadAction<string[]>) => {
+            console.log("action: " + action)
             // update list of current users
         },
         sendGameRequest: (state, action: PayloadAction<User>) => {
@@ -19,6 +19,9 @@ export const lobbySlice = createSlice({
         },
         receiveGameRequest: (state, action: PayloadAction<UserDetails>) => {
             // update gameRequests and use the state update to trigger a game request on the f/e
+        },
+        establishConnectionToLobby: (state, action) => {
+
         },
     }
 })

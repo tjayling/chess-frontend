@@ -2,7 +2,7 @@ import {User} from "../types/user";
 
 export type LobbyData = |{
     action: 'currentUsers';
-    payload: User[];
+    payload: string[];
 }|{
     action: 'sessionId';
     payload: string;

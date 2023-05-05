@@ -72,7 +72,7 @@ const ChessBoard: React.FC<Props> = ({boardSize, playingWhite, encodedBoard, pos
     }, [encodedBoardIndex]);
 
     useEffect(() => {
-        console.log('pieceToPromote', pieceToPromote);
+        // console.log('pieceToPromote', pieceToPromote);
         return () => {
             setPieceToPromote(undefined);
         };
@@ -80,7 +80,7 @@ const ChessBoard: React.FC<Props> = ({boardSize, playingWhite, encodedBoard, pos
     }, [promotingTrigger]);
 
     useEffect(() => {
-        console.log('finalMove', finalMove);
+        // console.log('finalMove', finalMove);
         if (finalMove?.getTargetSquare() === 24) {
         }
         return () => {
